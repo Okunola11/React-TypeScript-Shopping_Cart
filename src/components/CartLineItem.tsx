@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactElement } from "react";
+import { ChangeEvent, ReactElement, memo } from "react";
 import { CartItemType } from "../context/CartProvider";
 import { ReducerAction } from "../context/CartProvider";
 import { ReducerActionType } from "../context/CartProvider";
@@ -86,4 +86,25 @@ const CartLineItem = ({
 
   return content;
 };
-export default CartLineItem;
+
+//this checks to see if the previous item object and the next item object are equal. In the props passed in above,
+// 'dispatch' and 'REDUCER_ACTIONS' are memoised from the Context but items is not. This makes sure it doesn't re-render
+const areItemsEqual = (
+  { item: prevItem }: PropsType,
+  { item: nextItem }: PropsType
+) => {
+  return Object.keys(prevItem).every((key) => {
+    return (
+      prevItem[key as keyof CartItemType] ===
+      nextItem[key as keyof CartItemType]
+    );
+  });
+};
+// we pass this confirmation in as a second argument for memo. If one item on the list changes, the rest should not re-render
+
+const memoisedCartLineItem = memo<typeof CartLineItem>(
+  CartLineItem,
+  areItemsEqual
+);
+
+export default memoisedCartLineItem;

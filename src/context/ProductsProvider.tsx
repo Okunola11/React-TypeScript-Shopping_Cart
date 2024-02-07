@@ -18,7 +18,7 @@ const initState: ProductType[] = [
     "price": 19.99,
   },
   {
-    "sku": "item0001",
+    "sku": "item0003",
     "name": "Deluxe Widget",
     "price": 29.99,
   },
