@@ -10,10 +10,10 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
   const { totalItems, totalPrice } = useCart();
 
   const content = (
-    <header className="header">
-      <div className="header__title-bar">
+    <header className="flex justify-between bg-slate-50 dark:bg-black dark:text-white">
+      <div className="flex flex-grow justify-between">
         <h1>Acme Co.</h1>
-        <div className="header__price-box">
+        <div className="">
           <p>Total Items: {totalItems}</p>
           <p>Total Price: {totalPrice}</p>
         </div>

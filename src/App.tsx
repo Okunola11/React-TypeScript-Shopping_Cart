@@ -10,11 +10,11 @@ function App() {
   const pageContent = viewCart ? <Cart /> : <ProductList />;
 
   const content = (
-    <>
+    <body className="min-h-screen sm:scroll-smooth">
       <Header viewCart={viewCart} setViewCart={setViewCart} />
       {pageContent}
       <Footer viewCart={viewCart} />
-    </>
+    </body>
   );
   return content;
 }
