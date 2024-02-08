@@ -10,7 +10,7 @@ function App() {
   const pageContent = viewCart ? <Cart /> : <ProductList />;
 
   const content = (
-    <body className="min-h-screen sm:scroll-smooth">
+    <body className="min-h-screen sm:scroll-smooth bg-slate-50 dark:bg-black dark:text-white">
       <Header viewCart={viewCart} setViewCart={setViewCart} />
       {pageContent}
       <Footer viewCart={viewCart} />

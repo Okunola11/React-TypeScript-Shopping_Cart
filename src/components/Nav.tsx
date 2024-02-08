@@ -10,7 +10,7 @@ const Nav = ({ viewCart, setViewCart }: PropsType) => {
     <button onClick={() => setViewCart(true)}>View Cart</button>
   );
 
-  const content = <nav className="nav">{button}</nav>;
+  const content = <nav className="flex justify-end mx-4">{button}</nav>;
 
   return content;
 };
