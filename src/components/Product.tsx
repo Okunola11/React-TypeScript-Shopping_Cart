@@ -28,9 +28,9 @@ const Product = ({
   const itemInCart = inCart ? " → Item in Cart: ✔️" : null;
 
   const content = (
-    <article className="product">
-      <h3>{product.name}</h3>
-      <img src={img} alt={product.name} className="product__img" />
+    <article className="w-11/12 mb-4">
+      <h3 className="mb-1">{product.name}</h3>
+      <img src={img} alt={product.name} className="max-w-80 rounded-xl" />
       <p>
         {new Intl.NumberFormat("en-US", {
           style: "currency",
@@ -38,7 +38,12 @@ const Product = ({
         }).format(product.price)}{" "}
         {itemInCart}
       </p>
-      <button onClick={onAddCart}>Add to Cart</button>
+      <button
+        onClick={onAddCart}
+        className="border-white border-2 rounded-lg p-1 bg-gray-600"
+      >
+        Add to Cart
+      </button>
     </article>
   );
 

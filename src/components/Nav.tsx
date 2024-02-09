@@ -5,9 +5,19 @@ type PropsType = {
 
 const Nav = ({ viewCart, setViewCart }: PropsType) => {
   const button = viewCart ? (
-    <button onClick={() => setViewCart(false)}>View Products</button>
+    <button
+      onClick={() => setViewCart(false)}
+      className="border-white border-2 rounded-lg p-1 bg-gray-600"
+    >
+      View Products
+    </button>
   ) : (
-    <button onClick={() => setViewCart(true)}>View Cart</button>
+    <button
+      onClick={() => setViewCart(true)}
+      className="border-white border-2 rounded-lg p-1 bg-gray-600"
+    >
+      View Cart
+    </button>
   );
 
   const content = <nav className="flex justify-end mx-4">{button}</nav>;

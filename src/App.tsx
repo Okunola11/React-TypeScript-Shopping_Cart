@@ -10,9 +10,9 @@ function App() {
   const pageContent = viewCart ? <Cart /> : <ProductList />;
 
   const content = (
-    <body className="min-h-screen sm:scroll-smooth bg-slate-50 dark:bg-black dark:text-white">
+    <body className="min-h-screen flex flex-col sm:scroll-smooth bg-slate-50 dark:bg-black dark:text-white">
       <Header viewCart={viewCart} setViewCart={setViewCart} />
-      {pageContent}
+      <main className="flex flex-grow gap-4 mx-4 p-1">{pageContent}</main>
       <Footer viewCart={viewCart} />
     </body>
   );

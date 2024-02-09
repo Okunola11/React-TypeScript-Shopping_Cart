@@ -19,7 +19,11 @@ const Footer = ({ viewCart }: PropsType) => {
     </>
   );
 
-  const content = <footer className="footer">{pageContent}</footer>;
+  const content = (
+    <footer className="flex justify-end flex-col bg-slate-600 gap-1 p-1">
+      <div className="mx-2">{pageContent}</div>
+    </footer>
+  );
 
   return content;
 };
