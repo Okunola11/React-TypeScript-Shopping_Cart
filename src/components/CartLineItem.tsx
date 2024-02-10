@@ -42,8 +42,8 @@ const CartLineItem = ({
     dispatch({ type: REDUCER_ACTIONS.REMOVE, payload: item });
 
   const content = (
-    <li className="cart__item">
-      <img src={img} alt={item.name} className="cart__img" />
+    <li className="cart__item mb-4 grid grid-cols-[3fr,15fr,5fr,1fr,8fr,1fr] grid-flow-col gap-2">
+      <img src={img} alt={item.name} className="cart__img min-w-16" />
       <div aria-label="Item Name">{item.name}</div>
       <div aria-label="Price Per Item">
         {new Intl.NumberFormat("en-US", {
@@ -52,13 +52,16 @@ const CartLineItem = ({
         }).format(item.price)}
       </div>
 
-      <label htmlFor="itemQty" className="offscreen">
+      <label
+        htmlFor="itemQty"
+        className="offscreen left-full -translate-x-full sr-only"
+      >
         Item Quantity
       </label>
       <select
         name="itemQty"
         id="itemQty"
-        className="cart__select"
+        className="cart__select text-black max-h-10 max-w-10"
         value={item.quantity}
         aria-label="Item Quantity"
         onChange={onChangeQty}
@@ -74,7 +77,7 @@ const CartLineItem = ({
       </div>
 
       <button
-        className="cart__button"
+        className="cart__button max-h-12 justify-end"
         aria-label="Remove Item from Cart"
         title="Remove Item from Cart"
         onClick={onRemoveFromCart}

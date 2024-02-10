@@ -15,8 +15,8 @@ const Cart = () => {
     <h2>Thank you for your order</h2>
   ) : (
     <>
-      <h2 className="offscreen">Cart</h2>
-      <ul className="cart">
+      <h2 className="absolute left-full -translate-x-full sr-only">Cart</h2>
+      <ul className="cart w-full">
         {cart.map((item) => {
           return (
             <CartLineItem
@@ -42,7 +42,11 @@ const Cart = () => {
     </>
   );
 
-  const content = <main className="main main--cart">{pageContent}</main>;
+  const content = (
+    <main className="main main--cart flex flex-col flex-grow gap-2 w-full">
+      {pageContent}
+    </main>
+  );
 
   return content;
 };
