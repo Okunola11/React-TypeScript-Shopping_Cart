@@ -61,7 +61,7 @@ const CartLineItem = ({
       <select
         name="itemQty"
         id="itemQty"
-        className="cart__select text-black max-h-10 max-w-10"
+        className="cart__select text-black max-h-10 max-w-10 rounded-sm"
         value={item.quantity}
         aria-label="Item Quantity"
         onChange={onChangeQty}
@@ -69,7 +69,10 @@ const CartLineItem = ({
         {options}
       </select>
 
-      <div className="cart__item-subtotal" aria-label="Line Item Subtotal">
+      <div
+        className="cart__item-subtotal text-center"
+        aria-label="Line Item Subtotal"
+      >
         {new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
@@ -77,7 +80,7 @@ const CartLineItem = ({
       </div>
 
       <button
-        className="cart__button max-h-12 justify-end"
+        className="cart__button max-h-12 justify-end border-white border-2 rounded-lg p-1 bg-gray-600"
         aria-label="Remove Item from Cart"
         title="Remove Item from Cart"
         onClick={onRemoveFromCart}
