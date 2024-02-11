@@ -7,14 +7,14 @@ const Nav = ({ viewCart, setViewCart }: PropsType) => {
   const button = viewCart ? (
     <button
       onClick={() => setViewCart(false)}
-      className="border-white border-2 rounded-lg p-1 bg-gray-600"
+      className="border-white border-2 rounded-lg p-1 bg-gray-800 shadow-xl text-white dark:text-black"
     >
       View Products
     </button>
   ) : (
     <button
       onClick={() => setViewCart(true)}
-      className="border-white border-2 rounded-lg p-1 bg-gray-600"
+      className="border-white border-2 rounded-lg p-1 bg-gray-800 shadow-xl text-white dark:text-black"
     >
       View Cart
     </button>

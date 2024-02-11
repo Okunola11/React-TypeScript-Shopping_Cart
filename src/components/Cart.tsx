@@ -32,7 +32,7 @@ const Cart = () => {
         <p>Total Item: {totalItems}</p>
         <p>Total Price: {totalPrice}</p>
         <button
-          className="cart__submit border-white border-2 rounded-lg p-1 bg-gray-600"
+          className="cart__submit mt-2 border-white border-2 rounded-lg p-1 bg-gray-600 text-white dark:text-black"
           disabled={!totalItems}
           onClick={onSubmitOrder}
         >

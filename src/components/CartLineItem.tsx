@@ -42,7 +42,7 @@ const CartLineItem = ({
     dispatch({ type: REDUCER_ACTIONS.REMOVE, payload: item });
 
   const content = (
-    <li className="cart__item mb-4 grid grid-cols-[3fr,15fr,5fr,1fr,8fr,1fr] grid-flow-col gap-2">
+    <li className="cart__item my-4 grid grid-cols-[3fr,15fr,5fr,1fr,8fr,1fr] grid-flow-col gap-2">
       <img src={img} alt={item.name} className="cart__img min-w-16" />
       <div aria-label="Item Name">{item.name}</div>
       <div aria-label="Price Per Item">
@@ -80,7 +80,7 @@ const CartLineItem = ({
       </div>
 
       <button
-        className="cart__button max-h-12 justify-end border-white border-2 rounded-lg p-1 bg-gray-600"
+        className="cart__button max-h-12 justify-end border-white border-2 rounded-lg p-1 bg-white"
         aria-label="Remove Item from Cart"
         title="Remove Item from Cart"
         onClick={onRemoveFromCart}
