@@ -21,7 +21,7 @@ const Footer = ({ viewCart }: PropsType) => {
 
   const content = (
     <footer className="flex justify-end flex-col bg-slate-600 gap-1 p-1">
-      <div className="mx-2 text-white dark:text-black">{pageContent}</div>
+      <div className="mx-2 text-white">{pageContent}</div>
     </footer>
   );
 

@@ -40,7 +40,7 @@ const Product = ({
       </p>
       <button
         onClick={onAddCart}
-        className="border-white border-2 rounded-lg p-1 bg-gray-600 text-white dark:text-black"
+        className="border-white border-2 rounded-lg p-1 bg-gray-600 text-white mt-1"
       >
         Add to Cart
       </button>

@@ -61,7 +61,7 @@ const CartLineItem = ({
       <select
         name="itemQty"
         id="itemQty"
-        className="cart__select text-black max-h-10 max-w-10 rounded-sm"
+        className="cart__select text-black max-h-10 max-w-10 border-2 border-gray-600 border-solid rounded-[5px] dark:border-white"
         value={item.quantity}
         aria-label="Item Quantity"
         onChange={onChangeQty}
@@ -80,7 +80,7 @@ const CartLineItem = ({
       </div>
 
       <button
-        className="cart__button max-h-12 justify-end border-white border-2 rounded-lg p-1 bg-white"
+        className="cart__button max-h-12 justify-end border-gray-600 dark:border-white border-2 rounded-lg p-1 bg-white"
         aria-label="Remove Item from Cart"
         title="Remove Item from Cart"
         onClick={onRemoveFromCart}
